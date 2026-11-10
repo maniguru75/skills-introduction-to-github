@@ -19,7 +19,9 @@ Skills live in `.claude/skills/`. Config lives in `outbound-agent/config/`. Work
 5. **Respect opt-outs.** Anyone who says stop / unsubscribe / not interested goes into `outbound-agent/data/suppression.csv` and is never contacted again. Check that file before drafting.
 6. **No fabrication.** Personalisation must come from a source the agent actually retrieved (a Lusha signal, the company website, a news item). Record the source in the pipeline. If you have nothing real, write a generic but honest opener. Never invent mutual connections, metrics or customer names.
 7. **Respect daily caps** in `outbound-agent/config/settings.yaml`.
-8. Show every time in the host's Calendly timezone with an inline abbreviation (e.g. "10:00 AM IST"). Never show `api.calendly.com` URIs to the user; only show `booking_url` / `scheduling_url`.
+8. **Keep private details private.** `outbound-agent/config/sender.private.md` is git-ignored. Never copy its contents into committed files, commit messages or PRs.
+9. **ISACA wording.** The user is an independent trainer, not an accredited ISACA partner. Write "exam preparation for CISA/CISM…" and never "official", "accredited" or "authorised" ISACA training.
+10. Show every time in the host's Calendly timezone with an inline abbreviation (e.g. "10:00 AM IST"). Never show `api.calendly.com` URIs to the user; only show `booking_url` / `scheduling_url`.
 
 ## State
 

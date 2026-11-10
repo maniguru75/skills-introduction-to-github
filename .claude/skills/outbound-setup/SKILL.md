@@ -9,7 +9,7 @@ Read `CLAUDE.md` rules first. This skill only reads and creates config; it sends
 
 ## Steps
 
-1. **Config check.** Read `outbound-agent/config/icp.yaml`, `offer.md`, `settings.yaml`. If they still hold placeholder values (`<...>`, "Placeholder ICP"), list what's missing and ask the user to fill them in before going on.
+1. **Config check.** Read `outbound-agent/config/icp.yaml`, `offer.md`, `settings.yaml` and `sender.private.md`. If `sender.private.md` is missing, copy it from `sender.private.example.md` and ask the user to fill in at least Name, Title and Company. If they still hold placeholder values (`<...>`, "Placeholder ICP"), list what's missing and ask the user to fill them in before going on.
 
 2. **Calendly.**
    - `mcp__Calendly__users-get_current_user` → note the name, timezone, user URI and `scheduling_url`.

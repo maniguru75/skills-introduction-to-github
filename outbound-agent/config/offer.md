@@ -2,21 +2,25 @@
 
 > Lines marked **TODO** need your input. Never let the agent invent proof: leave a TODO blank rather than guess.
 
-## Sender
-- Name: **TODO** (as it should appear in emails)
-- Title: **TODO**
-- Company: **TODO**
-- Website: **TODO**
+## Sender & proof
+Kept in the private, git-ignored file `outbound-agent/config/sender.private.md`
+(template: `sender.private.example.md`). Skills read it at draft time. Never copy its contents into committed files.
 
 ## What we sell (one sentence)
 Governance, Risk & Compliance (GRC) advisory, end-to-end implementation, audit and ISACA/IT certification training for regulated and non-regulated organisations across Oman, the GCC and EMEA.
 
 ## Service lines
 1. **Advisory & consulting**: GRC strategy, gap assessments, risk frameworks, policy design.
-2. **Implementation**: taking frameworks from paper to practice (e.g. ISO/IEC 27001, NIST CSF, COBIT, local regulator frameworks). **TODO:** list only the frameworks you've actually delivered.
+2. **Implementation**: management systems and frameworks taken from paper to practice:
+   - Management systems: ISMS (ISO/IEC 27001), BCMS (ISO 22301), AIMS (ISO/IEC 42001), PIMS (ISO/IEC 27701)
+   - Frameworks & standards: NIST CSF, COBIT, ISO 31000, PCI DSS, SOC 2 Type I & II readiness
+   - Regulatory: Oman Personal Data Protection Law (PDPL)
+   - Risk: ERM, RCSA (risk & control self-assessment), TPRM (third-party risk management)
+   - Cybersecurity programme / project management
 3. **Audit**: internal / IT audit, readiness and pre-certification audits.
-4. **Training**: ISACA certification prep (e.g. CISA, CISM, CRISC, CGEIT, CDPSE) and other IT skills.
-   **TODO:** confirm whether you're an ISACA-accredited training partner. Don't claim "official" ISACA training unless you are.
+4. **Training**: exam preparation for ISACA certifications (CISA, CISM, CRISC, CGEIT, CDPSE) and other IT skills.
+   Independent trainer, NOT an ISACA-accredited training partner. Always say "exam preparation for CISA/CISM…".
+   Never say "official", "accredited" or "authorised" ISACA training, and never use ISACA's logo or imply endorsement.
 
 ## Pains we solve, by segment
 - **regulated_enterprise** (CISO / CRO / CIO / Internal Audit)
@@ -31,10 +35,8 @@ Governance, Risk & Compliance (GRC) advisory, end-to-end implementation, audit a
   1. Client demand for GRC services or ISACA training they can't deliver in-house.
   2. Need for a credible delivery partner in Oman/GCC.
 
-## Proof (real only, no invented numbers)
-- **TODO:** a client or sector you're allowed to mention (e.g. "a GCC bank", if you can't name them)
-- **TODO:** a measurable result (e.g. "certification achieved in X months"), with source
-- **TODO:** your relevant credentials (e.g. your own ISACA certifications, years of experience)
+## Proof
+In `sender.private.md`. Use only the lines filled in there; skip any proof line left blank.
 
 ## Meeting ask
 - Call type: 30-minute intro call on Microsoft Teams

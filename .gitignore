@@ -40,3 +40,4 @@ Thumbs.db
 ########################################################
 outbound-agent/data/*
 !outbound-agent/data/.gitkeep
+outbound-agent/config/sender.private.md

@@ -8,7 +8,7 @@ description: Write personalised first-touch emails as Gmail drafts plus LinkedIn
 Follow `CLAUDE.md`. Drafts only. Never send email or LinkedIn messages.
 
 ## Inputs
-`offer.md` (value prop, proof, tone, CTA), `settings.yaml` (caps, opt-out line), `pipeline.csv` rows with `stage=researched`, and `suppression.csv`.
+`offer.md` (value prop, tone, CTA), `outbound-agent/config/sender.private.md` (sender details and proof; if missing, stop and ask the user to create it from `sender.private.example.md`), `settings.yaml` (caps, opt-out line), `pipeline.csv` rows with `stage=researched`, and `suppression.csv`.
 
 ## Email 1 rules
 - Under 120 words, plain text (use the `body` field, no Markdown).
