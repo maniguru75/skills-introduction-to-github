@@ -26,10 +26,11 @@ Follow `CLAUDE.md`. Searches and enrichment spend Lusha credits, so always get a
 
 6. **Shortlist for approval.** Show a table (name, title, company, size, signal, why they fit), capped at `batch_size`. Ask the user which rows to enrich. Do not reveal contact details yet.
 
-7. **Enrich approved rows only.** `mcp__Lusha__prospecting_contact_enrich` with the chosen ids, respecting `daily_caps.lusha_enrich_per_run`. Keep work email and LinkedIn URL. Skip anyone without a work email (mark them `linkedin_only` in notes).
+7. **Credit budget.** Don't reveal phone numbers (5 credits each) unless the user asks. Signals are billed per company (`showSignalsCompany`), so fetch them only for the top shortlisted companies, not for whole search pages.
+8. **Enrich approved rows only.** `mcp__Lusha__prospecting_contact_enrich` with the chosen ids, respecting `daily_caps.lusha_enrich_per_run`. Keep work email and LinkedIn URL. Skip anyone without a work email (mark them `linkedin_only` in notes).
 
-8. **Write to pipeline.** Append rows with `stage=sourced`, `signal`, `signal_source` (e.g. "Lusha signal: funding, <date>"), and the Lusha ids. Pass the `conversation_id` from Lusha responses back on related calls.
+9. **Write to pipeline.** Append rows with `stage=sourced`, `signal`, `signal_source` (e.g. "Lusha signal: funding, <date>"), and the Lusha ids. Pass the `conversation_id` from Lusha responses back on related calls.
 
-9. Report: how many were found, shortlisted, enriched and added, plus credits used.
+10. Report: how many were found, shortlisted, enriched and added, plus credits used.
 
 Alternative: the built-in `lusha:prospect` / `lusha:signal-prospect` skills cover the same ground. Using them is fine, as long as the results land in `pipeline.csv`.
