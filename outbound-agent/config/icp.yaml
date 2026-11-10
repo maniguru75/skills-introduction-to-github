@@ -1,0 +1,27 @@
+# Ideal Customer Profile — EDIT THIS FILE before your first run.
+# Every value below is a placeholder.
+
+icp_name: "Placeholder ICP"
+
+company:
+  industries: ["Software", "SaaS"]          # free text; the agent maps these to Lusha industry ids
+  employee_range: { min: 50, max: 500 }
+  countries: ["United States", "United Kingdom"]
+  exclude_domains: []                       # current customers, competitors, partners
+
+people:
+  job_titles: ["Head of Sales", "VP Sales", "Revenue Operations Manager"]
+  seniority: ["Director", "VP", "C-Level"]  # mapped to Lusha seniority ids via filters tool
+  departments: ["Sales"]
+  exclude_titles: ["Intern", "Assistant"]
+
+# Buying signals that raise priority (each maps to a Lusha signal type, check names
+# via mcp__Lusha__signals_company_filters / signals_contact_filters)
+buying_signals:
+  - "Recent funding"
+  - "Hiring for sales roles"
+  - "Headcount growth"
+  - "Job change / new in role"
+
+# Prospects per run (after shortlisting, before enrichment)
+batch_size: 20

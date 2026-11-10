@@ -12,5 +12,11 @@ Remember, it's self-paced so feel free to take a break! ☕️
 
 ---
 
+## Project: Outbound Booking Agent
+
+This repo also holds a Claude Code outbound sales + Calendly booking agent. See [`outbound-agent/README.md`](outbound-agent/README.md) to get started.
+
+---
+
 &copy; 2025 GitHub &bull; [Code of Conduct](https://www.contributor-covenant.org/version/2/1/code_of_conduct/code_of_conduct.md) &bull; [MIT License](https://gh.io/mit)
 
