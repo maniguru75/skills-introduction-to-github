@@ -1,0 +1,104 @@
+# Ideal Customer Profile — GRC advisory, implementation, audit & ISACA/IT training
+# Three segments, because each buyer needs a different message.
+# Lusha filter names/ids are resolved at run time via the *_filters tools.
+# Note: Lusha's data coverage in Oman/GCC may be thinner than in the US/EU. Check the
+# result counts on the first run and widen the titles if lists come back small.
+
+geo:
+  # Phase 1: home market + the largest GCC economies (see "Geo rationale" in offer.md)
+  phase_1: ["Oman", "Saudi Arabia", "United Arab Emirates"]
+  # Phase 2: the rest of the GCC
+  phase_2: ["Qatar", "Bahrain", "Kuwait"]
+  # Phase 3 (stretch): EU, driven by DORA / NIS2; more competitive
+  phase_3: []
+  active_phase: phase_1
+
+segments:
+
+  - id: regulated_enterprise
+    goal: "Advisory, implementation, audit engagements"
+    company:
+      industries:
+        - "Banking & Financial Services"
+        - "Insurance"
+        - "Government & Public Sector"
+        - "Oil & Gas / Energy / Utilities"
+        - "Telecommunications"
+        - "Healthcare"
+        - "Information Technology & Services"
+      employee_range: { min: 50, max: null }    # all sizes; 50 floor removes micro-firms
+      exclude_domains: []                      # add current clients and competitors
+    people:
+      job_titles:
+        - "CISO"
+        - "Head of Information Security"
+        - "Chief Risk Officer"
+        - "Head of Risk"
+        - "Head of Compliance"
+        - "Chief Compliance Officer"
+        - "CIO"
+        - "IT Director"
+        - "Head of Internal Audit"
+        - "Chief Audit Executive"
+      seniority: ["Director", "VP", "C-Level", "Head"]
+      exclude_titles: ["Intern", "Assistant", "Trainee"]
+
+  - id: training_buyer
+    goal: "ISACA certification & IT skills training for staff"
+    company:
+      industries:
+        - "Banking & Financial Services"
+        - "Government & Public Sector"
+        - "Oil & Gas / Energy / Utilities"
+        - "Telecommunications"
+        - "Information Technology & Services"
+        - "Education / Higher Education"
+      employee_range: { min: 200, max: null }   # training budgets are usually at larger orgs
+      exclude_domains: []
+    people:
+      job_titles:
+        - "Head of Learning and Development"
+        - "L&D Manager"
+        - "Training Manager"
+        - "HR Director"
+        - "Head of Talent"
+        - "Procurement Manager"
+        - "Dean"                     # education institutions
+        - "Head of Continuing Education"
+      seniority: ["Manager", "Director", "Head", "C-Level"]
+      exclude_titles: ["Intern", "Assistant"]
+
+  - id: partner
+    goal: "Channel / distribution / co-delivery partnerships"
+    company:
+      industries:
+        - "IT Training & Education Providers"
+        - "IT Distributors & Value-Added Resellers"
+        - "Management Consulting"
+        - "Professional Associations & Forums"
+      employee_range: { min: 10, max: null }
+      exclude_domains: []
+    people:
+      job_titles:
+        - "Founder"
+        - "Managing Director"
+        - "General Manager"
+        - "Head of Partnerships"
+        - "Business Development Director"
+        - "Channel Manager"
+      seniority: ["Director", "Head", "C-Level", "Owner"]
+      exclude_titles: ["Intern", "Assistant"]
+
+# Buying signals that raise priority. Exact Lusha signal names come from
+# mcp__Lusha__signals_company_filters / signals_contact_filters.
+buying_signals:
+  - "Recent funding"
+  - "Hiring for GRC / security / risk / compliance / audit roles"
+  - "Headcount growth"
+  - "Job change / new in role"         # a new CISO/CRO often reviews their GRC programme
+  - "Regulatory / compliance mandate"  # not a Lusha signal: found in research-prospects
+                                       # (e.g. a new regulator rule affecting their sector)
+
+# Prospects per run (after shortlisting, before enrichment), per segment
+batch_size: 10
+segments_per_run: ["regulated_enterprise"]   # start with one; add others after first results

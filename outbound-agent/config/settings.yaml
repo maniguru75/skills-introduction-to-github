@@ -1,0 +1,31 @@
+# Safety & cadence settings
+
+mode: drafts_only            # do not change; the skills never send email themselves
+
+daily_caps:
+  new_first_touch_drafts: 25   # new prospects per day; keep low to protect your domain
+  follow_up_drafts: 40
+  lusha_enrich_per_run: 5      # free plan has 40 credits; agent still asks before spending
+
+follow_up_schedule_days: [3, 7]   # Email 2 after 3 business days, Email 3 after 7 more; then stop
+max_touches: 3
+
+gmail:
+  labels:                      # created on first run by outbound-setup
+    root: "Outbound"
+    interested: "Outbound/Interested"
+    not_now: "Outbound/Not-Now"
+    objection: "Outbound/Objection"
+    opted_out: "Outbound/Opted-Out"
+    booked: "Outbound/Booked"
+
+calendly:
+  event_type_name: "30 Minute Meeting"   # 30 min, Microsoft Teams
+  host_timezone: "Asia/Calcutta"         # display times as IST
+  slots_to_offer: 3            # times quoted in the reply, besides the link
+  look_ahead_days: 7
+
+compliance:
+  include_opt_out_line: true
+  opt_out_line: "If this isn't relevant, just reply \"no thanks\" and I won't follow up."
+  physical_address: ""         # needed for CAN-SPAM in the US; add your business address
