@@ -20,7 +20,8 @@ gmail:
     booked: "Outbound/Booked"
 
 calendly:
-  event_type_name: ""          # filled in by outbound-setup
+  event_type_name: "30 Minute Meeting"   # 30 min, Microsoft Teams
+  host_timezone: "Asia/Calcutta"         # display times as IST
   slots_to_offer: 3            # times quoted in the reply, besides the link
   look_ahead_days: 7
 

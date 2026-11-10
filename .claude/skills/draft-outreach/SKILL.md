@@ -12,6 +12,7 @@ Follow `CLAUDE.md`. Drafts only. Never send email or LinkedIn messages.
 
 ## Email 1 rules
 - Under 120 words, plain text (use the `body` field, no Markdown).
+- Use the prospect's `segment` to pick the pains and CTA from `offer.md` (`regulated_enterprise`, `training_buyer` or `partner`). Skip any proof line still marked TODO.
 - Structure: hook (from `personalisation_hook`, or an honest generic line if `none`) → the pain → one line of value plus one real proof point → a soft question CTA ("Worth a 20-minute chat next week?").
 - Don't put the Calendly link in Email 1. It goes in only after they show interest (see `book-meetings`). This keeps first-touch emails link-light and lands them in the inbox more often.
 - Add `compliance.opt_out_line`, and `physical_address` if one is set.

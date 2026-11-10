@@ -10,6 +10,8 @@ Follow `CLAUDE.md`. Searches and enrichment spend Lusha credits, so always get a
 ## Steps
 
 1. Load `outbound-agent/config/icp.yaml` and `settings.yaml`. Load `outbound-agent/data/pipeline.csv` and `suppression.csv` so you skip anyone already contacted or opted out.
+   - The ICP has **segments**. Process only the ones in `segments_per_run`, using countries from `geo.<active_phase>`. Run steps 2–8 once per segment and write the segment `id` into the `segment` column.
+   - **Geo demand check (optional, on request or on the first run):** with approval, run a small company search per country in `geo.phase_1` + `phase_2`, combined with GRC/security/risk hiring signals, and report counts per country so the user can choose `active_phase` from data rather than assumption.
 
 2. **Resolve filters (free).** Call `mcp__Lusha__prospecting_company_filters` and `mcp__Lusha__prospecting_contact_filters`, one filter type per call (e.g. `industries_labels`, `sizes`, `seniority`, locations), to turn the ICP text into valid ids. Check each tool's schema for the exact filter type names; don't guess them.
 
