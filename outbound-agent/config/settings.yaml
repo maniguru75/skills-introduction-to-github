@@ -5,7 +5,7 @@ mode: drafts_only            # do not change; the skills never send email themse
 daily_caps:
   new_first_touch_drafts: 25   # new prospects per day; keep low to protect your domain
   follow_up_drafts: 40
-  lusha_enrich_per_run: 20     # credits guard; agent still asks before spending
+  lusha_enrich_per_run: 5      # free plan has 40 credits; agent still asks before spending
 
 follow_up_schedule_days: [3, 7]   # Email 2 after 3 business days, Email 3 after 7 more; then stop
 max_touches: 3
